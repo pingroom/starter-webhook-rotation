@@ -1,0 +1,28 @@
+{
+  "name": "pingroom-starter-webhook-rotation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Rotate an incoming PingRoom webhook through an explicit overlapping migration.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/rotate.mjs status",
+    "plan": "node scripts/rotate.mjs plan",
+    "stage": "node scripts/rotate.mjs stage",
+    "adopt": "node scripts/rotate.mjs adopt",
+    "retire": "node scripts/rotate.mjs retire",
+    "recover": "node scripts/rotate.mjs recover",
+    "export-url": "node scripts/rotate.mjs export-url",
+    "cancel": "node scripts/rotate.mjs cancel",
+    "connect": "node scripts/connect.mjs",
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test",
+    "inventory": "node scripts/rotate.mjs inventory"
+  },
+  "dependencies": {
+    "@pingroom/cli": "0.12.0"
+  }
+}
